@@ -41,13 +41,13 @@ Node* Node::getIndexOfFirst() {
 }
 
 Node* Node::getIndexOfAfter(int after) {
-    if(after < 0 || after > neighbors.size()-1)
+    if(after < 0 || after > neighbors.size()-2)
         return nullptr;
     return neighbors.at(after+1);
 }
 
 Node *Node::getNeighbor(int index) {
-    if(index < 0 || index > neighbors.size())
+    if(index < 0 || index > neighbors.size()-1)
         return nullptr;
     for (int i = 0; i < neighbors.size(); ++i) {
         if(index == neighbors.at(i)->getIndex())

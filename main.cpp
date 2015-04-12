@@ -75,17 +75,17 @@ int main() {
             continue;
         }
         if(graph->first(tempNodeIndex) == -1){
-            cout << "Blad funkcji 'first'";
+            cout << "Blad funkcji 'first'" << endl;
             continue;
         }
         cout << "Rezultat funkcji 'first': " << graph->first(tempNodeIndex) << endl;
         if(graph->next(tempNodeIndex,nextFunctionArgument) == -1){
-            cout << "Blad funkcji 'next'";
+            cout << "Blad funkcji 'next'" << endl;
             continue;
         }
         cout << "Rezultat funkcji 'next': " << graph->next(tempNodeIndex,nextFunctionArgument) << endl;
         if(graph->vertex(tempNodeIndex,vertexFunctionArgument) == nullptr){
-            cout << "Blad funkcji 'first'";
+            cout << "Blad funkcji 'vertex'" << endl;
             continue;
         }
         cout << "Rezultat funkcji 'vertex': " << graph->vertex(tempNodeIndex,vertexFunctionArgument) << endl;

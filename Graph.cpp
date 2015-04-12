@@ -14,9 +14,12 @@ int Graph::first(int nodeIndex) {
 }
 
 int Graph::next(int nodeIndex, int afterWhich) {
-    if(nodeIndex < 0 || nodeIndex > nodes.size())
+    if(nodeIndex < 0 || nodeIndex > nodes.size()-2)
         return -1;
-    return nodes.at(nodeIndex)->getIndexOfAfter(afterWhich)->getIndex();
+    if(nodes.at(nodeIndex)->getIndexOfAfter(afterWhich) != nullptr)
+        return nodes.at(nodeIndex)->getIndexOfAfter(afterWhich)->getIndex();
+    else
+        return -1;
 }
 
 Node *Graph::vertex(int nodeIndex, int indexOfNeighbor) {
