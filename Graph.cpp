@@ -57,6 +57,7 @@ void Graph::neighbourhoodList() {
         nodes.at(i)->toString();
         cout << " ->";
         nodes.at(i)->readNeighbors();
+        cout << endl;
     }
 }
 

@@ -27,7 +27,7 @@ void Node::readNeighbors() {
 
 
 void Node::toString() {
-    cout << "index(" << getIndex() << "), " << "value(" << getValue() << ")";
+    cout << "Vertex(" << getIndex() << "," << getValue() << ")";
 }
 
 void Node::pushNeighbor(Node *node) {
