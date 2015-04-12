@@ -20,9 +20,8 @@ Node::Node(int index) {
 
 void Node::readNeighbors() {
     for (int i = 0; i < neighbors.size(); ++i) {
-        cout << "   " ;
+        cout << " " ;
         neighbors.at(i)->toString();
-        cout << endl;
     }
 }
 
@@ -50,5 +49,9 @@ Node* Node::getIndexOfAfter(int after) {
 Node *Node::getNeighbor(int index) {
     if(index < 0 || index > neighbors.size())
         return nullptr;
-    return neighbors.at(index);
+    for (int i = 0; i < neighbors.size(); ++i) {
+        if(index == neighbors.at(i)->getIndex())
+            return neighbors.at(i);
+    }
+        return nullptr;
 }
