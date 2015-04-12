@@ -41,7 +41,7 @@ Node* Node::getIndexOfFirst() {
 }
 
 Node* Node::getIndexOfAfter(int after) {
-    if(after < 0 || after > neighbors.size())
+    if(after < 0 || after > neighbors.size()-1)
         return nullptr;
     return neighbors.at(after+1);
 }
