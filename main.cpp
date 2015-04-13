@@ -85,7 +85,7 @@ int main() {
         }
         cout << "Rezultat funkcji 'next': " << graph->next(tempNodeIndex,nextFunctionArgument) << endl;
         if(graph->vertex(tempNodeIndex,vertexFunctionArgument) == nullptr){
-            cout << "Blad funkcji 'vertex'" << endl;
+            cout << "Blad funkcji 'vertex' lub wezel nie jest sasiadem" << endl;
             continue;
         }
         cout << "Rezultat funkcji 'vertex': " << graph->vertex(tempNodeIndex,vertexFunctionArgument) << endl;
